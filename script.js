@@ -1,6 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
     const backgroundMusic = document.getElementById('backgroundMusic');
     backgroundMusic.muted = false;
+
+    function playMusic() {
+        backgroundMusic.play();
+        document.removeEventListener('click', playMusic);
+        document.removeEventListener('touchstart', playMusic);
+    }
+
+    document.addEventListener('click', playMusic);
+    document.addEventListener('touchstart', playMusic);
 });
 
 document.getElementById('randomButton').addEventListener('click', function() {
