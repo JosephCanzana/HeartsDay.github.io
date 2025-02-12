@@ -1,8 +1,3 @@
-document.addEventListener("click", function() {
-    const video = document.getElementById("backgroundVideo");
-    video.muted = false; // Unmute after user clicks
-});
-
 document.addEventListener('DOMContentLoaded', function() {
     const backgroundMusic = document.getElementById('backgroundMusic');
     const startButton = document.getElementById('startButton');
@@ -85,6 +80,7 @@ document.getElementById('randomButton').addEventListener('click', function() {
         window.counter++;
     } else {
         // Hide the GIF, show the video, and update the question text
+        setTimeout(2000);
         backgroundMusic.muted = true;
         gifContainer.style.display = 'none';
         videoContainer.style.display = 'block';
