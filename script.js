@@ -1,14 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const backgroundMusic = document.getElementById('backgroundMusic');
-    backgroundMusic.muted = true; // Mute initially to allow autoplay
-    setTimeout(() => {
-        backgroundMusic.play().then(() => {
-            backgroundMusic.muted = false; // Unmute after autoplay starts
-        }).catch(error => {
-            console.log('Autoplay was prevented:', error);
-            // Optionally, you can add a button to start the music manually
-        });
-    }, 1000); // 1-second delay
+    backgroundMusic.muted = false;
 });
 
 document.getElementById('randomButton').addEventListener('click', function() {
