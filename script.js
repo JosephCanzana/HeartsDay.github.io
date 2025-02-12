@@ -1,6 +1,24 @@
+document.addEventListener("click", function() {
+    const video = document.getElementById("backgroundVideo");
+    video.muted = false; // Unmute after user clicks
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     const backgroundMusic = document.getElementById('backgroundMusic');
+    const startButton = document.getElementById('startButton');
+    const questionContainer = document.getElementById('questionContainer');
+    const gifContainer = document.querySelector('.gif');
+    const buttonContainer = document.querySelector('.button-container');
+
     backgroundMusic.muted = false;
+
+    startButton.addEventListener('click', function() {
+        backgroundMusic.play();
+        startButton.style.display = 'none';
+        questionContainer.style.display = 'block';
+        gifContainer.style.display = 'block';
+        buttonContainer.style.display = 'flex';
+    });
 
     function playMusic() {
         backgroundMusic.play();
@@ -61,9 +79,13 @@ document.getElementById('randomButton').addEventListener('click', function() {
 
     if (window.counter < noMessages.length) {
         button.innerText = noMessages[window.counter]; // Change button text
+        if (window.counter === noMessages.length - 1) {
+            body.style.backgroundColor = 'yellow'; // Change background color to yellow
+        }
         window.counter++;
     } else {
         // Hide the GIF, show the video, and update the question text
+        backgroundMusic.muted = true;
         gifContainer.style.display = 'none';
         videoContainer.style.display = 'block';
         questionContainer.innerText = "😜 I will 'Never gonna give you up 🤌'";

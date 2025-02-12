@@ -12,7 +12,6 @@ body {
     text-align: center;
     font-family: 'Comic Neue', cursive !important;
     font-weight: 600;
-
 }
 
 /* Style for the question */
@@ -20,8 +19,6 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 20px;
-
-
 }
 
 /* Style for the GIF */
@@ -40,6 +37,22 @@ body {
     margin-top: 20px;
 }
 
+/* Video container */
+.video-container {
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
 /* Button styling */
 button {
     padding: 10px 20px;
@@ -51,14 +64,55 @@ button {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-
 /* Responsive Design */
+@media (max-width: 768px) {
+    .gif img {
+        width: 300px; /* Half of the original width */
+        height: 200px; /* Half of the original height */
+    }
+    .question-container {
+        font-size: 1.2rem;
+    }
+    button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+    .video-container {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gif img {
+        width: 150px; /* Half of the width in the previous media query */
+        height: 100px; /* Half of the height in the previous media query */
+    }
+    .question-container {
+        font-size: 1rem;
+    }
+    button {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+    .button-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .video-container {
+        max-width: 150px;
+    }
+}
+
 @media (max-width: 300px) {
     .gif img {
-        max-width: 200px;
+        max-width: 100px; /* Smaller size for very small screens */
+        height: auto;
     }
     button {
         font-size: 0.8rem;
         padding: 8px 16px;
+    }
+    .video-container {
+        max-width: 100px;
     }
 }
