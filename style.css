@@ -67,52 +67,52 @@ button {
 /* Responsive Design */
 @media (max-width: 768px) {
     .gif img {
-        width: 345px; 
-        height: 230px; 
+        width: 468px; /* 20% larger than 390px */
+        height: 312px; /* 20% larger than 260px */
     }
     .question-container {
-        font-size: 1.38rem; 
+        font-size: 1.87rem; /* 20% larger than 1.56rem */
     }
     button {
-        font-size: 1.15rem; 
-        padding: 9.2px 18.4px; 
+        font-size: 1.56rem; /* 20% larger than 1.3rem */
+        padding: 12.48px 24.96px; /* 20% larger than 10.4px 20.8px */
     }
     .video-container {
-        max-width: 345px; 
+        max-width: 468px; /* 20% larger than 390px */
     }
 }
 
 @media (max-width: 480px) {
     .gif img {
-        width: 172.5px; 
-        height: 115px;
+        width: 234px; /* 20% larger than 195px */
+        height: 156px; /* 20% larger than 130px */
     }
     .question-container {
-        font-size: 1.15rem; 
+        font-size: 1.56rem; /* 20% larger than 1.3rem */
     }
     button {
-        font-size: 0.92rem;
-        padding: 6.9px 13.8px;
+        font-size: 1.25rem; /* 20% larger than 1.04rem */
+        padding: 9.36px 18.72px; /* 20% larger than 7.8px 15.6px */
     }
     .button-container {
         flex-direction: column;
-        gap: 11.5px; 
+        gap: 15.6px; /* 20% larger than 13px */
     }
     .video-container {
-        max-width: 172.5px;
+        max-width: 234px; /* 20% larger than 195px */
     }
 }
 
 @media (max-width: 300px) {
     .gif img {
-        max-width: 115px; 
+        max-width: 156px; /* 20% larger than 130px */
         height: auto;
     }
     button {
-        font-size: 0.92rem; 
-        padding: 9.2px 18.4px;
+        font-size: 1.25rem; /* 20% larger than 1.04rem */
+        padding: 12.48px 24.96px; /* 20% larger than 10.4px 20.8px */
     }
     .video-container {
-        max-width: 115px; 
+        max-width: 156px; /* 20% larger than 130px */
     }
 }
