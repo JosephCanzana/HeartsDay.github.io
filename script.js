@@ -9,8 +9,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const noButton = document.getElementById('noButton');
     const noVideo = document.getElementById('noVideo');
     const yesVideo = document.getElementById('yesVideo');
+    const noCounter = document.getElementById('noCounter'); 
 
     backgroundMusic.muted = false;
+    noCounter.hidden = true;
 
     startButton.addEventListener('click', function() {
         backgroundMusic.play();
@@ -19,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
         questionContainer.style.display = 'block';
         gifContainer.style.display = 'block';
         buttonContainer.style.display = 'flex';
+        noCounter.hidden = false;
     });
 
     function playMusic() {
@@ -41,7 +44,9 @@ document.getElementById('noButton').addEventListener('click', function() {
     const videoContainer = document.querySelector('.video-container');
     const noVideo = document.getElementById('noVideo');
     const buttonContainer = document.querySelector('.button-container');
+    const noCounter = document.getElementById('noCounter'); 
 
+    const borderMargin = 15; 
     const maxX = body.clientWidth - button.offsetWidth;
     const maxY = body.clientHeight - button.offsetHeight;
 
@@ -58,8 +63,8 @@ document.getElementById('noButton').addEventListener('click', function() {
     }
 
     do {
-        randomX = Math.floor(Math.random() * maxX);
-        randomY = Math.floor(Math.random() * maxY);
+        randomX = Math.floor(Math.random() * (maxX - borderMargin * 2)) + borderMargin;
+        randomY = Math.floor(Math.random() * (maxY - borderMargin * 2)) + borderMargin;
         button.style.position = 'absolute';
         button.style.left = randomX + 'px';
         button.style.top = randomY + 'px';
@@ -79,21 +84,47 @@ document.getElementById('noButton').addEventListener('click', function() {
     }
 
     if (window.counter < noMessages.length) {
-        button.innerText = noMessages[window.counter]; // Change button text
-        if (window.counter === noMessages.length - 1) {
-            body.style.backgroundColor = 'yellow'; // Change background color to yellow
-        }
+        button.innerText = noMessages[window.counter];
         window.counter++;
     } else {
+        // Show "Because..." message before the final stage
+        yesButtonSizeW = yesButton.style.width;
+        yesButtonSizeH = yesButton.style.height;
         backgroundMusic.muted = true;
+        questionContainer.style.display = 'none';
         gifContainer.style.display = 'none';
-        videoContainer.style.display = 'block';
-        questionContainer.innerText = "😜 I will 'Never gonna give you up 🤌'";
+        noCounter.style.display = 'none';
         noButton.style.display = 'none';
+        yesButton.style.display = 'none';
+        topText.style.display ='none';
 
-        noVideo.style.display = 'block'; // Ensure video is visible
-        noVideo.muted = false; // Unmute
-        noVideo.play();
+        const becauseContainer = document.getElementById('becauseContainer');
+        const nextButton = document.getElementById('nextButton');
+
+        becauseContainer.style.display = 'block';
+        nextButton.style.display = 'block';
+
+        nextButton.addEventListener('click', function() {
+            becauseContainer.style.display = 'none';
+
+            questionContainer.style.display = 'block';   
+            topText.style.display = 'block'; 
+            //buttonContainer.style.display = 'block'; 
+            yesButton.style.height = yesButtonSizeH;
+            yesButton.style.width = yesButtonSizeW;  
+            yesButton.style.display = 'block'; 
+            noButton.style.display = 'block';
+
+            backgroundMusic.muted = true;
+            
+            videoContainer.style.display = 'block';
+            questionContainer.innerText = "😜 I will \"Never gonna give you up\" 🤌";
+            noButton.style.display = 'none';
+
+            noVideo.style.display = 'block'; 
+            noVideo.muted = false;
+            noVideo.play();
+        }, { once: true });
     }
 
     // Increase the size of the "Yes" button
@@ -117,7 +148,22 @@ document.getElementById('noButton').addEventListener('click', function() {
 
     // Change the GIF in order
     gif.src = gifPaths[window.gifCounter];
-    window.gifCounter = (window.gifCounter + 1) % gifPaths.length; // Loop back to the start if at the end
+    window.gifCounter = (window.gifCounter + 1) % gifPaths.length; 
+
+    // Increment and display the "No" counter
+    if (typeof window.noClickCounter === 'undefined') {
+        window.noClickCounter = 0;
+    }
+    window.noClickCounter++;
+    if (noClickCounter <= 3){
+        noCounter.innerText = `No Count: ${window.noClickCounter}`;
+    }else if(noClickCounter > 3 && noClickCounter <= 6){
+        noCounter.innerText = `Maybe? Count: ${window.noClickCounter}`;
+    }else if(noClickCounter > 6 && noClickCounter < 9 ){
+        noCounter.innerText = `Please? Count: ${window.noClickCounter}`;
+    }else{
+        noCounter.innerText = `I'm giving up: ${window.noClickCounter}`;
+    }
 });
 
 document.getElementById('yesButton').addEventListener('click', function() {
@@ -126,7 +172,7 @@ document.getElementById('yesButton').addEventListener('click', function() {
     const buttonContainer = document.querySelector('.button-container');
     const noVideo = document.getElementById('noVideo');
     const yesVideo = document.getElementById('yesVideo');
-    const yesResponse = document.querySelector('.yes-response'); // Get the div containing the video
+    const yesResponse = document.querySelector('.yes-response'); 
 
     // Hide unnecessary elements
     buttonContainer.style.display = 'none';
@@ -137,10 +183,12 @@ document.getElementById('yesButton').addEventListener('click', function() {
 
     // Show the "Yes" response video
     backgroundMusic.muted = true;
-    yesResponse.style.display = 'block'; // Make the div visible
-    yesVideo.style.display = 'block'; // Make sure the video is visible
-    yesVideo.muted = false; // Unmute if needed
-    yesVideo.play(); // Play the video
+    shareId.style.display = 'block';
+    bibleVerse.style.display = 'block';
+    yesResponse.style.display = 'block';
+    yesVideo.style.display = 'block'; 
+    yesVideo.muted = false; 
+    yesVideo.play(); 
 
     // Update question text
     questionContainer.innerText = "Thank you for willingly saying Yes! 🎉";

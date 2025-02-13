@@ -18,7 +18,11 @@ body {
 .question-container {
     font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 20px;
+    text-align: center;
+    margin: 10px auto;
+    padding: 10px;
+    display: inline-block;
+    color: #20333f;
 }
 
 /* Style for the GIF */
@@ -34,7 +38,7 @@ body {
 .button-container {
     display: flex;
     gap: 15px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 /* Video container */
@@ -44,10 +48,25 @@ body {
     height: auto;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
 }
 
 .video-container video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.yes-response video{
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.yes-response video{
     width: 100%;
     height: auto;
     border-radius: 10px;
@@ -62,6 +81,50 @@ button {
     cursor: pointer;
     transition: 0.3s ease-in-out;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.bible-verse {
+    display: none;
+    text-align: center;
+    font-size: 1rem; 
+    max-width: 80%;
+    margin: 15px auto;
+    padding: 10px;
+    background-color: #a0d5eb;
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    line-height: 1.4;
+}
+
+.share-id {
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#becauseContainer {
+    display: none;
+    text-align: center;
+    background-color: rgb(221, 221, 111);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    margin: auto;
+}
+
+/* Style the link */
+.share-id a {
+    color: #d63384; /* Soft pink for a subtle touch */
+    font-weight: normal;
+    text-decoration: none;
+    word-wrap: break-word;
+}
+
+.share-id a:hover {
+    text-decoration: underline;
+    color: #b52d6a; /* Slightly darker pink on hover */
 }
 
 /* Responsive Design */
@@ -79,6 +142,17 @@ button {
     }
     .video-container {
         max-width: 390px; 
+    }
+    .yes-response video{
+        max-width: 390px; 
+    }
+    .bible-verse {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+    .share-id {
+        font-size: 0.9rem;
+        padding: 8px;
     }
 }
 
@@ -101,6 +175,17 @@ button {
     .video-container {
         max-width: 350px; 
     }
+    .yes-response video{
+        max-width: 350px; 
+    }
+    .bible-verse {
+        font-size: 0.85rem;
+        padding: 6px;
+    }
+    .share-id {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
 }
 
 @media (max-width: 300px) {
@@ -116,6 +201,9 @@ button {
         font-size: 1.00rem; 
     }
     .video-container {
+        max-width: 250px; 
+    }
+    .yes-response video{
         max-width: 250px; 
     }
 }

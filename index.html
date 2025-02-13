@@ -19,13 +19,17 @@
             <h2> <b>Happy Heart's Day!!! </b></h2>
             ✔️Check your volume<br>
             ✔️There's a counter<br>
-            ✔️Read No Messages
+            ✔️Read 'No' Messages
         </button>
-
-        <div id="topText" style="display: none;">
+        
+        <div id="topText" style="display: none; color: rgb(100, 45, 53);">
             <h5> Happy Heart's day</h5>
         </div>
 
+        <!-- No Counter Display -->
+        <p id="noCounter"  style="color: rgb(100, 45, 53)";>No Count: 0</p> 
+
+        <!--Video and gif display-->
         <div class="gif" style="display: none;">
             <img src="images/cute-squirtle.gif" alt="Animated GIF">
         </div>
@@ -36,22 +40,47 @@
                 Your browser does not support the video tag.
             </video>
         </div>
+
         <div class="yes-response" style="display: none;">
             <p id="yesText"></p>
-            <video id="yesVideo" width="560" height="315" controls>
+            <video id="yesVideo" width="560" height="315" controls loop>
                 <source src="videos/Epic Sax Squirtle EDIT.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
         
+        <!-- Container for the "Because..." message (initially hidden) -->
+        <div id="becauseContainer" style="display: none;" class="text-bg-light p-3" >
+            <h2>Am I gonna give up!? <br>NO! Because...</h2>
+            <button id="nextButton" style="display: none; border-radius: 10px;" class="btn btn-primary">Next</button>
+        </div>
 
-        <div class="question-container" id="questionContainer" style="display: none;">Let's get together!?</div>
+        <!--Questions -->
+        <div class="question-container" id="questionContainer" style="display: none;">Let's spend Hearts day together?</div>
         
+        <!--Buttons-->
         <div class="button-container" style="display: none;">
             <button type="button" class="btn btn-success" id="yesButton">Yes</button>
             <button id="noButton" class="btn btn-danger">No</button>
         </div>
 
+        <!-- Simple Bible verse (Hidden by default) -->
+        <div id="bibleVerse" style="display: none;" class="bible-verse">
+            <p>
+                "We love because He first loved us."<br>
+                <strong>1 John 4:19 (NIV)</strong><br>
+                <em>God bless!!!<br> Have a great Day!</em>
+            </p>
+        </div>
+
+        <!--Share Link-->
+        <div id="shareId" class="share-id" style="display: none;">
+            <p>Share with others:<br>
+                <a href="https://josephcanzana.github.io/HeartsDay.github.io/" target="_blank">
+                    https://josephcanzana.github.io/HeartsDay.github.io/
+                </a>
+            </p>
+        </div>
 
         <!-- Background music -->
         <audio id="backgroundMusic" loop>
