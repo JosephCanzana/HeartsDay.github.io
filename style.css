@@ -207,3 +207,32 @@ button {
         max-width: 250px; 
     }
 }
+
+/* Media query for larger screens */
+@media (min-width: 1024px) {
+    .gif img {
+        width: 480px; 
+        height: 360px; 
+    }
+    .question-container {
+        font-size: 2.5rem; 
+    }
+    button {
+        font-size: 1.5rem; 
+        padding: 12px 24px; 
+    }
+    .video-container {
+        max-width: 600px; 
+    }
+    .yes-response video{
+        max-width: 600px; 
+    }
+    .bible-verse {
+        font-size: 1.2rem;
+        padding: 12px;
+    }
+    .share-id {
+        font-size: 1.2rem;
+        padding: 12px;
+    }
+}
