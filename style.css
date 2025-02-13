@@ -59,7 +59,7 @@ body {
 
 .yes-response video{
     width: 100%;
-    max-width: 560px;
+    max-width: 40px;
     height: auto;
     border-radius: 10px;
     overflow: hidden;
