@@ -213,7 +213,7 @@ document.getElementById('yesButton').addEventListener('click', function() {
     }else if (noClickCounter <= 3){
         questionContainer.innerText = "Oh, a little hesitation? It's okay! Thanks!😏";
     }else if(noClickCounter > 3 && noClickCounter <= 6){
-        questionContainer.innerText = "You think you we're just forced... Thanks though 😅";
+        questionContainer.innerText = "I think you we're just forced... Thanks though 😅";
     }else if(noClickCounter > 6 && noClickCounter < 9 ){
         questionContainer.innerText = "I'm starting to take this personally... 🥺";
     }else{
