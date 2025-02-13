@@ -22,13 +22,13 @@ body {
     margin: 10px auto;
     padding: 10px;
     display: inline-block;
-    color: #20333f;
+    color: #292b3a;
 }
 
 /* Style for the GIF */
 .gif img {
-    width: 600px; /* Fixed width */
-    height: 400px; /* Fixed height */
+    width: 400px; /* Fixed width */
+    height: 300px; /* Fixed height */
     object-fit: cover; 
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -106,7 +106,7 @@ button {
 #becauseContainer {
     display: none;
     text-align: center;
-    background-color: rgb(221, 221, 111);
+    background-color: rgb(253, 253, 49);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
@@ -130,8 +130,8 @@ button {
 /* Responsive Design */
 @media (max-width: 768px) {
     .gif img {
-        width: 390px; 
-        height: 260px; 
+        width: 300px; 
+        height: 250px; 
     }
     .question-container {
         font-size: 1.56rem; 

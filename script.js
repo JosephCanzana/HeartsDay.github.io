@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     backgroundMusic.muted = false;
     noCounter.hidden = true;
+    window.noClickCounter = 0;
+    questionContainer.innerText = "Let's spend Hearts day together?"
 
     startButton.addEventListener('click', function() {
         backgroundMusic.play();
@@ -173,6 +175,21 @@ document.getElementById('yesButton').addEventListener('click', function() {
     const noVideo = document.getElementById('noVideo');
     const yesVideo = document.getElementById('yesVideo');
     const yesResponse = document.querySelector('.yes-response'); 
+    const bibleVerse = document.getElementById('bibleVerse');
+    const verseText = document.getElementById('verseText');
+    const verseRef = document.getElementById('verseRef');
+
+    const verses = [
+        { text: "We love because He first loved us.", ref: "1 John 4:19" },
+        { text: "Let all that you do be done in love.", ref: "1 Corinthians 16:14" },
+        { text: "Above all, love each other deeply.", ref: "1 Peter 4:8" },
+        { text: "God is love.", ref: "1 John 4:8" },
+        { text: "Do everything in love.", ref: "1 Corinthians 16:14" },
+        { text: "My command is this: Love each other as I have loved you.", ref: "John 15:12" },
+        { text: "Be completely humble and gentle; be patient, bearing with one another in love.", ref: "Ephesians 4:2" },
+        { text: "And now these three remain: faith, hope and love. But the greatest of these is love.", ref: "1 Corinthians 13:13" },
+        { text: "Hatred stirs up conflict, but love covers over all wrongs.", ref: "Proverbs 10:12" }
+    ];
 
     // Hide unnecessary elements
     buttonContainer.style.display = 'none';
@@ -191,5 +208,20 @@ document.getElementById('yesButton').addEventListener('click', function() {
     yesVideo.play(); 
 
     // Update question text
-    questionContainer.innerText = "Thank you for willingly saying Yes! 🎉";
+    if(noClickCounter == 0){ 
+        questionContainer.innerText = "Wow, no hesitation? Thankss!!!🎉😄";
+    }else if (noClickCounter <= 3){
+        questionContainer.innerText = "Oh, a little hesitation? It's okay! Thanks!😏";
+    }else if(noClickCounter > 3 && noClickCounter <= 6){
+        questionContainer.innerText = "You think you we're just forced... Thanks though 😅";
+    }else if(noClickCounter > 6 && noClickCounter < 9 ){
+        questionContainer.innerText = "I'm starting to take this personally... 🥺";
+    }else{
+        questionContainer.innerText = "Thank you for \"willingly\" saying Yes! 🎉";
+    }
+
+    // Show a random Bible verse
+    const verse = verses[Math.floor(Math.random() * verses.length)];
+    verseText.innerText = verse.text;
+    verseRef.innerText = verse.ref;
 });
