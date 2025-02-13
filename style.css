@@ -216,10 +216,10 @@ button {
         padding: 12px 24px; 
     }
     .video-container {
-        max-width: 600px; 
+        max-width: 480px; 
     }
     .yes-response video {
-        max-width: 600px; 
+        max-width: 480px; 
     }
     .bible-verse {
         font-size: 1.2rem;
