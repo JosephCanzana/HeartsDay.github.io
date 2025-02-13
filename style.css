@@ -16,7 +16,7 @@ body {
 
 /* Style for the question */
 .question-container {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
     margin-bottom: 20px;
 }
@@ -67,52 +67,55 @@ button {
 /* Responsive Design */
 @media (max-width: 768px) {
     .gif img {
-        width: 468px; /* 20% larger than 390px */
-        height: 312px; /* 20% larger than 260px */
+        width: 390px; 
+        height: 260px; 
     }
     .question-container {
-        font-size: 1.87rem; /* 20% larger than 1.56rem */
+        font-size: 1.56rem; 
     }
     button {
-        font-size: 1.56rem; /* 20% larger than 1.3rem */
-        padding: 12.48px 24.96px; /* 20% larger than 10.4px 20.8px */
+        font-size: 1.3rem; 
+        padding: 10.4px 20.8px; 
     }
     .video-container {
-        max-width: 468px; /* 20% larger than 390px */
+        max-width: 390px; 
     }
 }
 
 @media (max-width: 480px) {
     .gif img {
-        width: 234px; /* 20% larger than 195px */
-        height: 156px; /* 20% larger than 130px */
+        width: 250px; 
+        height: 200px; 
     }
     .question-container {
-        font-size: 1.56rem; /* 20% larger than 1.3rem */
+        font-size: 1.20rem; 
     }
     button {
-        font-size: 1.25rem; /* 20% larger than 1.04rem */
-        padding: 9.36px 18.72px; /* 20% larger than 7.8px 15.6px */
+        font-size: 1.25rem; 
+        padding: 9.36px 18.72px; 
     }
     .button-container {
         flex-direction: column;
-        gap: 15.6px; /* 20% larger than 13px */
+        gap: 15.6px;     
     }
     .video-container {
-        max-width: 234px; /* 20% larger than 195px */
+        max-width: 350px; 
     }
 }
 
 @media (max-width: 300px) {
     .gif img {
-        max-width: 156px; /* 20% larger than 130px */
+        max-width: 200px; 
         height: auto;
     }
     button {
-        font-size: 1.25rem; /* 20% larger than 1.04rem */
-        padding: 12.48px 24.96px; /* 20% larger than 10.4px 20.8px */
+        font-size: 1.25rem; 
+        padding: 12.48px 24.96px;
+    }
+    .question-container {
+        font-size: 1.00rem; 
     }
     .video-container {
-        max-width: 156px; /* 20% larger than 130px */
+        max-width: 250px; 
     }
 }

@@ -1,15 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
     const backgroundMusic = document.getElementById('backgroundMusic');
     const startButton = document.getElementById('startButton');
+    const topText = document.getElementById('topText');
     const questionContainer = document.getElementById('questionContainer');
     const gifContainer = document.querySelector('.gif');
     const buttonContainer = document.querySelector('.button-container');
+    const yesButton = document.getElementById('yesButton');
+    const noButton = document.getElementById('noButton');
+    const noVideo = document.getElementById('noVideo');
+    const yesVideo = document.getElementById('yesVideo');
 
     backgroundMusic.muted = false;
 
     startButton.addEventListener('click', function() {
         backgroundMusic.play();
         startButton.style.display = 'none';
+        topText.style.display = 'block';
         questionContainer.style.display = 'block';
         gifContainer.style.display = 'block';
         buttonContainer.style.display = 'flex';
@@ -25,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('touchstart', playMusic);
 });
 
-document.getElementById('randomButton').addEventListener('click', function() {
+document.getElementById('noButton').addEventListener('click', function() {
     const button = this;
     const body = document.body;
     const gif = document.querySelector('.gif img');
@@ -79,13 +85,14 @@ document.getElementById('randomButton').addEventListener('click', function() {
         }
         window.counter++;
     } else {
-        // Hide the GIF, show the video, and update the question text
-        setTimeout(2000);
         backgroundMusic.muted = true;
         gifContainer.style.display = 'none';
         videoContainer.style.display = 'block';
         questionContainer.innerText = "😜 I will 'Never gonna give you up 🤌'";
-        buttonContainer.style.display = 'none';
+        noButton.style.display = 'none';
+
+        noVideo.style.display = 'block'; // Ensure video is visible
+        noVideo.muted = false; // Unmute
         noVideo.play();
     }
 
@@ -115,13 +122,26 @@ document.getElementById('randomButton').addEventListener('click', function() {
 
 document.getElementById('yesButton').addEventListener('click', function() {
     const questionContainer = document.getElementById('questionContainer');
-    const gif = document.querySelector('.gif img');
+    const gifContainer = document.querySelector('.gif');
     const buttonContainer = document.querySelector('.button-container');
+    const noVideo = document.getElementById('noVideo');
+    const yesVideo = document.getElementById('yesVideo');
+    const yesResponse = document.querySelector('.yes-response'); // Get the div containing the video
 
-    // Set the text and GIF for the "Yes" response
-    questionContainer.innerText = "Thank you for saying Yes! 🎉";
-    gif.src = "images/happySquirtle.gif"; // Change this to the path of your "Yes" GIF
-
-    // Hide the buttons
+    // Hide unnecessary elements
     buttonContainer.style.display = 'none';
+    gifContainer.style.display = 'none';
+    noVideo.pause();
+    noVideo.currentTime = 0;
+    noVideo.style.display = 'none'; 
+
+    // Show the "Yes" response video
+    backgroundMusic.muted = true;
+    yesResponse.style.display = 'block'; // Make the div visible
+    yesVideo.style.display = 'block'; // Make sure the video is visible
+    yesVideo.muted = false; // Unmute if needed
+    yesVideo.play(); // Play the video
+
+    // Update question text
+    questionContainer.innerText = "Thank you for willingly saying Yes! 🎉";
 });

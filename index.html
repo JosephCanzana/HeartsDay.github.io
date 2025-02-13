@@ -15,22 +15,19 @@
 
     </head>
     <body>   
-        <button id="startButton" class="btn btn-primary">Happy Heart's Day!!!</button>
+        <button id="startButton" class="btn btn-primary" class="button" style="background-color: rgb(224, 191, 196); color: #1b5374; ">
+            <h2> <b>Happy Heart's Day!!! </b></h2>
+            ✔️Check your volume<br>
+            ✔️There's a counter<br>
+            ✔️Read No Messages
+        </button>
 
-        <div class="question-container" id="questionContainer" style="display: none;">Question?</div>
+        <div id="topText" style="display: none;">
+            <h5> Happy Heart's day</h5>
+        </div>
 
         <div class="gif" style="display: none;">
             <img src="images/cute-squirtle.gif" alt="Animated GIF">
-        </div>
-    
-        <div class="button-container" style="display: none;">
-            <button type="button" class="btn btn-success" id="yesButton">Yes</button>
-            <button id="randomButton" class="btn btn-danger">No</button>
-        </div>
-
-        <div class="yes-response" style="display: none;">
-            <p id="yesText"></p>
-            <img id="yesGif" src="" alt="Yes GIF">
         </div>
 
         <div class="video-container" style="display: none;">
@@ -39,6 +36,22 @@
                 Your browser does not support the video tag.
             </video>
         </div>
+        <div class="yes-response" style="display: none;">
+            <p id="yesText"></p>
+            <video id="yesVideo" width="560" height="315" controls>
+                <source src="videos/Epic Sax Squirtle EDIT.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        
+
+        <div class="question-container" id="questionContainer" style="display: none;">Let's get together!?</div>
+        
+        <div class="button-container" style="display: none;">
+            <button type="button" class="btn btn-success" id="yesButton">Yes</button>
+            <button id="noButton" class="btn btn-danger">No</button>
+        </div>
+
 
         <!-- Background music -->
         <audio id="backgroundMusic" loop>
