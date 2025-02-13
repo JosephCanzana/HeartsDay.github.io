@@ -57,19 +57,13 @@ body {
     border-radius: 10px;
 }
 
-.yes-response video{
+.yes-response video {
     width: 100%;
-    max-width: 40px;
+    max-width: 450px;
     height: auto;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
-}
-
-.yes-response video{
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
 }
 
 /* Button styling */
@@ -143,7 +137,7 @@ button {
     .video-container {
         max-width: 300px; 
     }
-    .yes-response video{
+    .yes-response video {
         max-width: 300px; 
     }
     .bible-verse {
@@ -175,7 +169,7 @@ button {
     .video-container {
         max-width: 300px; 
     }
-    .yes-response video{
+    .yes-response video {
         max-width: 300px; 
     }
     .bible-verse {
@@ -203,7 +197,7 @@ button {
     .video-container {
         max-width: 250px; 
     }
-    .yes-response video{
+    .yes-response video {
         max-width: 250px; 
     }
 }
@@ -224,7 +218,7 @@ button {
     .video-container {
         max-width: 600px; 
     }
-    .yes-response video{
+    .yes-response video {
         max-width: 600px; 
     }
     .bible-verse {
