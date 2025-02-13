@@ -6,12 +6,13 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     background-color: #56a5e6 !important;
     text-align: center;
     font-family: 'Comic Neue', cursive !important;
     font-weight: 600;
+    overflow: auto;
 }
 
 /* Style for the question */

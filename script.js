@@ -137,10 +137,10 @@ document.getElementById('noButton').addEventListener('click', function() {
 
     // Array of GIF file paths
     const gifPaths = [
-        "images/thinkAgain.gif", "images/flowerSquirtle.gif", "images/Snow.gif",
-        "images/squirtleLittle.gif", "images/twoSquirtle.gif", "images/eatingSquirtle.gif",
-        "images/youSure.gif", "images/StumpingSquirtle.gif", "images/runningCrying.gif",
-        "images/SquirtleHeavyCry.gif", "images/layingCrying.gif"
+        "./images/thinkAgain.gif", "./images/flowerSquirtle.gif", "./images/Snow.gif",
+        "./images/squirtleLittle.gif", "./images/twoSquirtle.gif", "./images/eatingSquirtle.gif",
+        "./images/youSure.gif", "./images/StumpingSquirtle.gif", "./images/runningCrying.gif",
+        "./images/SquirtleHeavyCry.gif", "./images/layingCrying.gif"
     ];
 
     // Counter to keep track of the current GIF index
