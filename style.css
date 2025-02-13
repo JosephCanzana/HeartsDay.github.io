@@ -223,7 +223,7 @@ button {
         max-width: 480px; 
     }
     .bible-verse {
-        font-size: 1rem;
+        font-size: 2rem;
         padding: 12px;
     }
     .share-id {
@@ -248,6 +248,34 @@ button {
     }
     .yes-response video {
         max-width: 380px; 
+    }
+    .bible-verse {
+        font-size: 0.5rem;
+        padding: 12px;
+    }
+    .share-id {
+        font-size: 0.6rem;
+        padding: 12px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .gif img {
+        width: 350px; 
+        height: 230px; 
+    }
+    .question-container {
+        font-size: 1rem; 
+    }
+    button {
+        font-size: 1rem; 
+        padding: 12px 24px; 
+    }
+    .video-container {
+        max-width: 350px; 
+    }
+    .yes-response video {
+        max-width: 350px; 
     }
     .bible-verse {
         font-size: 0.5rem;
