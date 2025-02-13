@@ -27,8 +27,8 @@ body {
 
 /* Style for the GIF */
 .gif img {
-    width: 400px; /* Fixed width */
-    height: 300px; /* Fixed height */
+    width: 360px; /* Fixed width */
+    height: 260px; /* Fixed height */
     object-fit: cover; 
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -44,7 +44,7 @@ body {
 /* Video container */
 .video-container {
     width: 100%;
-    max-width: 560px;
+    max-width: 450px;
     height: auto;
     border-radius: 10px;
     overflow: hidden;
@@ -141,10 +141,10 @@ button {
         padding: 10.4px 20.8px; 
     }
     .video-container {
-        max-width: 390px; 
+        max-width: 300px; 
     }
     .yes-response video{
-        max-width: 390px; 
+        max-width: 300px; 
     }
     .bible-verse {
         font-size: 0.9rem;
@@ -173,10 +173,10 @@ button {
         gap: 15.6px;     
     }
     .video-container {
-        max-width: 350px; 
+        max-width: 300px; 
     }
     .yes-response video{
-        max-width: 350px; 
+        max-width: 300px; 
     }
     .bible-verse {
         font-size: 0.85rem;
