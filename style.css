@@ -206,28 +206,28 @@ button {
 /* Media query for larger screens */
 @media (min-width: 1024px) {
     .gif img {
-        width: 480px; 
-        height: 360px; 
+        width: 380px; 
+        height: 260px; 
     }
     .question-container {
-        font-size: 2rem; 
+        font-size: 1.5rem; 
     }
     button {
-        font-size: 1.5rem; 
+        font-size: 1rem; 
         padding: 12px 24px; 
     }
     .video-container {
-        max-width: 480px; 
+        max-width: 380px; 
     }
     .yes-response video {
-        max-width: 480px; 
+        max-width: 380px; 
     }
     .bible-verse {
-        font-size: 1rem;
+        font-size: 0.5rem;
         padding: 12px;
     }
     .share-id {
-        font-size: 1.2rem;
+        font-size: 0.6rem;
         padding: 12px;
     }
 }
